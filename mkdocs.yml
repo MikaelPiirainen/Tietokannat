@@ -11,8 +11,7 @@ docs_dir: docs
 
 # Navigation
 nav:
-  - Welcome:
-    - Overview: index.md
+  - Etusivu: index.md
   - Tietokanta: tietokanta.md   
 
 # Theme
