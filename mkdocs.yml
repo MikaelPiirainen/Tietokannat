@@ -33,7 +33,7 @@ theme:
     - navigation.expand
   palette:
     scheme: default
-    primary: blue
+    primary: purple
     accent: blue
 
 # Plugins
