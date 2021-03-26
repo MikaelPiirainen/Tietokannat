@@ -13,7 +13,7 @@ docs_dir: docs
 nav:
   - Welcome:
     - Overview: index.md
-    - Tietokanta: tietokanta.md   
+  - Tietokanta: tietokanta.md   
 
 # Theme
 
