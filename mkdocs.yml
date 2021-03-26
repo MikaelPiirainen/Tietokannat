@@ -1,18 +1,18 @@
 # Project information
-site_name: Testiprojekti
-site_url: https://MikaelPiirainen.github.io/testirepo
+site_name: Tietokannat
+site_url: https://MikaelPiirainen.github.io/Tietokannat
 site_author: Mikael Piirainen
 
 # Repository
-repo_name: testirepo
-repo_url: https://github.com/MikaelPiirainen/testirepo
-edit_uri: edit/master/docs
+repo_name: Tietokannat
+repo_url: https://github.com/MikaelPiirainen/Tietokannat
+edit_uri: edit/master/mkdocs-project/docs
 docs_dir: mkdocs-project/docs
 
 # Navigation
 nav:
   - Etusivu: index.md
-  - Tietokanta: tietokanta.md   
+  - Tokasivu: tokasivu.md
 
 ## DO NOT CHANGE BELOW THIS LINE
 
