@@ -7,7 +7,7 @@ site_author: Mikael Piirainen
 repo_name: testirepo
 repo_url: https://github.com/MikaelPiirainen/testirepo
 edit_uri: edit/master/docs
-docs_dir: docs
+docs_dir: mkdocs-project/docs
 
 # Navigation
 nav:
