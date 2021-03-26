@@ -1,4 +1,5 @@
-# testirepo
-Tämä on testi repo mkdocsin asennusta varten
+# Tietokannat
 
-[pages](https://MikaelPiirainen.github.io/testirepo)
+Tämä repo on tehty mkdocsin opettelua varten, tietokannat kurssin harjoitustyön dokumentointia varten.
+
+[Linkki sivuille](https://MikaelPiirainen.github.io/Tietokannat)
