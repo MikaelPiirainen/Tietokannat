@@ -21,3 +21,4 @@ mkdocs-project/site/
 # PowerPoint
 #~$*.ppt*
 ~$*
+site/
