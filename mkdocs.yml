@@ -1,11 +1,11 @@
 # Project information
 site_name: Tietokannat
-site_url: https://MikaelPiirainen.github.io/Tietokannat
+site_url: https://MikaelPiirainen.github.io/tietokannat
 site_author: Mikael Piirainen
 
 # Repository
-repo_name: Tietokannat
-repo_url: https://github.com/MikaelPiirainen/Tietokannat
+repo_name: tietokannat
+repo_url: https://github.com/MikaelPiirainen/tietokannat
 edit_uri: edit/master/mkdocs-project/docs
 docs_dir: mkdocs-project/docs
 
