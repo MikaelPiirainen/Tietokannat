@@ -12,7 +12,6 @@ docs_dir: mkdocs-project/docs
 # Navigation
 nav:
   - Etusivu: index.md
-  - Tokasivu: tokasivu.md
 
 ## DO NOT CHANGE BELOW THIS LINE
 

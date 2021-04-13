@@ -1,3 +1,0 @@
-# Hei!
-
-* Tämä on tokasivu.
