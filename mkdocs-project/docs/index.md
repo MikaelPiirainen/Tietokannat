@@ -11,7 +11,7 @@ VIDEON LINKKI
 
 
 * "elokuva_db" -tietokanta
-* Työryhmä: Mikael Piirainen
+* Työryhmä: Mikael Piirainen AA2799
 * Versio 1.0
 
 
@@ -57,7 +57,7 @@ Pakolliset toiminnot:
 
 Hahmotus tehty draw.io sovelluksella.
 
-![](ht_hahmotus.png)
+![](ht_draw.png)
 
 
 **Perustelut ratkaisuille:**
