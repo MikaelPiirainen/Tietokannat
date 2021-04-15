@@ -2,7 +2,7 @@
 
 **Esittely video:**
 
-![Video](esittely.mp4)
+![VIDEON LINKKI](https://youtu.be/uH-K4Kg0GGw){:target="_blank"}
 
 ## Suunnitelma
 
@@ -354,7 +354,15 @@ Salasana: noetarvaa
 
 ## Itsearviointi
 
-???
+Harjoitustyön tekeminen oli mielekästä puuhaa ja sain siinä lisäoppia entuudestaan tutusta SQL:stä ja sain palautettua myös PHP:n perustoimintoja. MkDocs:in asentaminen ja oppiminen oli aivan uusiasia ja markdownilla dokumentointia olen pitkin vuotta tehnytkin. Harmi vain etten saanut sitä studentin labranettiin toimimaan.
+
+Aikaa kului noin. **40 tuntia.**
+
+Olen tyytyväinen dokumentaatioon ja iloinen, että sain käyttöliittymän toimimaan, ja sitä aionkin jatkossa päivittää paremmaksi, jotta sinne voi laittaa tietoa myös, eikä pelkästään hakea niitä.
+
+Jonkinverran virheitä tuli työtä tietokantaa suunnittelussa ja tietokanta olisi voinut olla laajempikin.
+
+Arvosanaehdotus: **4.**
 
 ## Koodit
 
