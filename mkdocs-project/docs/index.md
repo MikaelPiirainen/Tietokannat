@@ -300,18 +300,18 @@ INSERT INTO Arvostelu(ArvostelijaID,ElokuvaID,Arvosana) VALUES
 
 CREATE VIEW nakymainfo /* Luotu yksi näkymä joka tuo nimiä monista tauluista ja laskee arvosteluiden keskiarvon elokuvittain. 
 Tiedot pinotaan yhteen ElokuvaID:llä ja järjestää Tähtien mukaan laskevassa järjestyksessä. */
-AS SELECT KategoriaNimi AS Kategoria, ElokuvaNimi AS Elokuva, OhjaajaNimi AS Ohjaaja, NayttelijaNimi AS Nayttelija, AVG(Arvosana) AS Tahdet FROM elokuva
-INNER JOIN nayttelijat
-ON elokuva.ElokuvaID = nayttelijat.ElokuvaID
-INNER JOIN nayttelija
-ON nayttelijat.NayttelijaID = nayttelija.NayttelijaID
-INNER JOIN ohjaaja
-ON elokuva.OhjaajaID = ohjaaja.OhjaajaID
-INNER JOIN kategoria
-ON elokuva.KategoriaID = kategoria.KategoriaID
-INNER JOIN arvostelu
-ON elokuva.ElokuvaID = arvostelu.ElokuvaID
-GROUP BY elokuva.ElokuvaID ORDER BY Tahdet DESC;
+AS SELECT KategoriaNimi AS Kategoria, ElokuvaNimi AS Elokuva, OhjaajaNimi AS Ohjaaja, NayttelijaNimi AS Nayttelija, AVG(Arvosana) AS Tahdet FROM Elokuva
+INNER JOIN Nayttelijat
+ON Elokuva.ElokuvaID = Nayttelijat.ElokuvaID
+INNER JOIN Nayttelija
+ON Nayttelijat.NayttelijaID = Nayttelija.NayttelijaID
+INNER JOIN Ohjaaja
+ON Elokuva.OhjaajaID = Ehjaaja.OhjaajaID
+INNER JOIN Kategoria
+ON Elokuva.KategoriaID = Kategoria.KategoriaID
+INNER JOIN Arvostelu
+ON Elokuva.ElokuvaID = Arvostelu.ElokuvaID
+GROUP BY Elokuva.ElokuvaID ORDER BY Tahdet DESC;
 ```
 
 ### SQL-kyselyjä
@@ -343,6 +343,7 @@ Koodi löytää Luke sanan Star Wars elokuvan kuvauksesta.
 Valmista liittymää voi käyttää nettisivuillani, ja koodit ovat dokumentaation lopussa.
 
 Käyttöliittymä: http://migza.com/tietokannat/
+
 Käyttäjätunnus: migza
 Salasana: noetarvaa
 
@@ -353,3 +354,201 @@ Salasana: noetarvaa
 ???
 
 ## Koodit
+
+Tässä käyttöliittymän koodit:
+
+**index.php**
+
+```PHP
+<html>
+<head>
+<title>Tietokannat</title>
+<link rel="stylesheet" href="tyylit.css">
+	<script>
+	function validateForm() {
+	  var x = document.forms["myForm"]["form-name"].value;
+	  if (x == "") {
+		alert("Syötä kenttään tekstiä");
+		return false;
+	  }
+	}
+	</script>
+</head>
+<body>
+	<header>
+	<h1><a href="">Elokuvatietokanta</a></h1>
+	</header>
+	<nav>
+		<div class="haku">
+			<form  name="myForm" action="" onsubmit="return validateForm()" method="post">
+			<input type="text" placeholder="Hae tietokannasta" name="form-name">
+			<input type="submit" value="Hae">
+			</form>
+		</div>
+	</nav>
+		<?php
+		include 'form.php';
+		?>
+	<footer>
+		Mikael Piirainen - AA2799@student.jamk.fi
+	</footer>
+</body>
+</html>
+```
+
+**form.php**
+
+```PHP
+<?php
+if(isset($_POST['form-name']))
+   {
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "elokuva_db";
+	$search = $_POST["form-name"];
+	
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $dbname);
+	// Check connection
+	if ($conn->connect_error) {
+	  die("Connection failed: " . $conn->connect_error);
+	}
+
+	echo "<div class='tulos'>";
+	echo "<div class='tulos-sisä'>";
+	echo "<h2>Elokuvat</h2>";
+	echo "<hr>";
+	
+	$sql = "SELECT ElokuvaNimi, Vuosi, Kuvaus, Kesto, OhjaajaNimi, AVG(Arvosana) AS Tahdet, NayttelijaNimi, KategoriaNimi FROM Elokuva
+	INNER JOIN Ohjaaja
+	ON Elokuva.OhjaajaID = Ohjaaja.OhjaajaID
+	INNER JOIN Arvostelu
+	ON Elokuva.ElokuvaID = Arvostelu.ElokuvaID
+	INNER JOIN Nayttelijat
+	ON Elokuva.ElokuvaID = Nayttelijat.ElokuvaID
+	INNER JOIN Nayttelija
+	ON Nayttelijat.NayttelijaID = Nayttelija.NayttelijaID
+	INNER JOIN Kategoria
+	ON Elokuva.KategoriaID = Kategoria.KategoriaID
+	WHERE 
+	ElokuvaNimi LIKE '%" . $search .  "%' 
+	OR Vuosi LIKE '%" . $search .  "%'
+	OR Kuvaus LIKE '%" . $search .  "%'
+	OR NayttelijaNimi LIKE '%" . $search .  "%'
+	OR KategoriaNimi LIKE '%" . $search .  "%'
+	OR OhjaajaNimi LIKE '%" . $search .  "%' GROUP BY Elokuva.ElokuvaID";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows > 0) {
+	  // output data of each row
+	  while($row = $result->fetch_assoc()) {
+		echo "<h3>" . $row["ElokuvaNimi"] . "</h3>" .
+			"Ohjaaja: " . $row["OhjaajaNimi"] . "<br>" .
+			"Näyttelijä: " . $row["NayttelijaNimi"] . "<br><br>" .
+			"Kategoria: " . $row["KategoriaNimi"] . "<br>" .
+			"Vuosi: " . $row["Vuosi"] . "<br>" .			
+			"Kesto: " . $row["Kesto"] . " min<br>" .
+			"Tähdet: " . $row["Tahdet"] . "<br><br>" .
+			"Kuvaus: " . $row["Kuvaus"] . "<br><hr>";
+	  }
+	} else {
+	  echo "Ei tuloksia.";
+	}
+	echo "</div></div>";
+	
+	$conn->close();
+   }
+?>
+```
+
+**tyylit.css**
+
+```CSS
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.haku {
+	font-family: Arial;
+	padding: 0;
+	margin: 0;
+	display: inline: block;
+}
+
+.tulos {
+	margin: 10px 30%;
+	display: block;
+	box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	overflow: hidden;
+}
+
+.tulos-sisä {
+	text-align: left;
+	font-family: arial;
+	overflow: hidden;
+}
+
+form {
+	padding: 0;
+	margin: 10;
+}
+
+header {
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	background-color: #575757;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Abel', sans-serif;
+	color: #f5f0f0;
+	letter-spacing: 0.1em;
+}
+
+a:link, a:visited {
+    color: #f5f0f0;
+    background-color: transparent;
+	text-decoration: none;
+}
+
+nav {
+	background-color: grey;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	overflow: hidden;
+	display: block;
+}
+
+footer {
+	background-color: #575757;
+	font-family: arial;
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px;
+	color: #f5f0f0;
+}
+
+input[type=text] {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  padding: 12px 20px;
+  text-decoration: none;
+  margin: 8px 0;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+```
