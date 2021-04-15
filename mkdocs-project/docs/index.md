@@ -30,7 +30,6 @@ Pakolliset toiminnot:
 * Elokuvien tietojen tallennus
 * Arvostelujen teko
 * Elokuvien haku tietokannasta
-* Tietojen ylläpito (komennoilla tai käyttöliittmällä)
 
 ---
 
@@ -93,27 +92,235 @@ Tietokanta ja taulut onnistuivat.
 
 ### Tietojen lisäys tauluihin
 
-Nyt kun tietokanta on luotu onnistuneesti voin lisätä sinne dataa.
+Nyt kun tietokanta on luotu onnistuneesti, niin sinne voidaan lisätä dataa.
+
+Tietojen lisäys _Kategoria_ tauluun:
 
 ![](ht_data1.png)
 
+Tietojen lisäys _Ohjaaja_ tauluun.
+
 ![](ht_data2.png)
+
+Tietojen lisäys _Nayttelija_ tauluun.
 
 ![](ht_data3.png)
 
+Tietojen lisäys _Elokuva_ tauluun.
+
 ![](ht_data4.png)
+
+Tietojen lisäys _Nayttelijat_ tauluun.
 
 ![](ht_data5.png)
 
+Tietojen lisäys _Arvostelija_ tauluun.
+
 ![](ht_data6.png)
+
+Tietojen lisäys _Arvostelu_ tauluun.
 
 ![](ht_data7.png)
 
 ### SQL-skripti
 
+Tietokannan luonti skripti.
+
+```SQL
+-- -----------------------------------------------------
+-- Schema elokuva_db
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `elokuva_db` ; -- Luo kyseisen tietokannan, jos sitä ei ole
+USE `elokuva_db` ; -- Ottaa luodun tietokannan käyttöön tulevia komentoja varten
+
+
+-- -----------------------------------------------------
+-- Table `Kategoria`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Kategoria` ( -- Luo taulun Kategoria, jos sitä ei ole
+  `KategoriaID` INT NOT NULL, -- INT (numero) tyyppinen sarake
+  `KategoriaNimi` VARCHAR(64) NOT NULL, -- Vaihtelevamerkki maksimissaan 64 merkkiä sarake
+  PRIMARY KEY (`KategoriaID`)) -- Taulun pääavaimeksi valitaan KategoriaID
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Ohjaaja`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Ohjaaja` ( 
+  `OhjaajaID` INT NOT NULL,
+  `OhjaajaNimi` VARCHAR(64) NOT NULL,
+  `Ika` INT(3) NOT NULL, -- INT on rajattu vain kolmilukuiseksi
+  PRIMARY KEY (`OhjaajaID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Elokuva`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Elokuva` (
+  `ElokuvaID` INT NOT NULL,
+  `OhjaajaID` INT NOT NULL,
+  `KategoriaID` INT NOT NULL,
+  `ElokuvaNimi` VARCHAR(128) NOT NULL, 
+  `Vuosi` YEAR NOT NULL, -- sarake johon voi laittaa vain vuosiluvun
+  `Kesto` INT(3) NOT NULL,
+  `Kuvaus` VARCHAR(512) NOT NULL,
+  PRIMARY KEY (`ElokuvaID`),
+  INDEX `fk_Elokuva_Kategoria1_idx` (`KategoriaID` ASC), -- viitetaulujen määritys
+  INDEX `fk_Elokuva_Ohjaaja1_idx` (`OhjaajaID` ASC),
+  CONSTRAINT `fk_Elokuva_Kategoria1`
+    FOREIGN KEY (`KategoriaID`)
+    REFERENCES `Kategoria` (`KategoriaID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Elokuva_Ohjaaja1`
+    FOREIGN KEY (`OhjaajaID`) -- Ohjaajan id:tä ei toimintaa poiston tai päivityksen yhteydessä
+    REFERENCES `Ohjaaja` (`OhjaajaID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table Nayttelija`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Nayttelija` (
+  `NayttelijaID` INT NOT NULL,
+  `NayttelijaNimi` VARCHAR(64) NOT NULL,
+  `Ika` INT(3) NOT NULL,
+  PRIMARY KEY (`NayttelijaID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Nayttelijat`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Nayttelijat` (
+  `NayttelijaID` INT NOT NULL,
+  `ElokuvaID` INT NOT NULL,
+  PRIMARY KEY (`NayttelijaID`, `ElokuvaID`),
+  INDEX `fk_Nayttelija_has_Elokuva_Elokuva1_idx` (`ElokuvaID` ASC),
+  INDEX `fk_Nayttelija_has_Elokuva_Nayttelija_idx` (`NayttelijaID` ASC),
+  CONSTRAINT `fk_Nayttelija_has_Elokuva_Nayttelija`
+    FOREIGN KEY (`NayttelijaID`)
+    REFERENCES `Nayttelija` (`NayttelijaID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Nayttelija_has_Elokuva_Elokuva1`
+    FOREIGN KEY (`ElokuvaID`)
+    REFERENCES `Elokuva` (`ElokuvaID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Arvostelija`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Arvostelija` (
+  `ArvostelijaID` INT NOT NULL,
+  `ArvostelijaNimi` VARCHAR(32) NOT NULL,
+  PRIMARY KEY (`ArvostelijaID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `Arvostelu`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Arvostelu` (
+  `ArvostelijaID` INT NOT NULL,
+  `ElokuvaID` INT NOT NULL,
+  `Arvosana` INT(10) NOT NULL,
+  PRIMARY KEY (`ArvostelijaID`, `ElokuvaID`),
+  INDEX `fk_Arvostelija_has_Elokuva_Elokuva1_idx` (`ElokuvaID` ASC),
+  INDEX `fk_Arvostelija_has_Elokuva_Arvostelija1_idx` (`ArvostelijaID` ASC),
+  CONSTRAINT `fk_Arvostelija_has_Elokuva_Arvostelija1`
+    FOREIGN KEY (`ArvostelijaID`)
+    REFERENCES `Arvostelija` (`ArvostelijaID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Arvostelija_has_Elokuva_Elokuva1`
+    FOREIGN KEY (`ElokuvaID`)
+    REFERENCES `Elokuva` (`ElokuvaID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+-- Taulut tehty, tästä alkaa tietojen lisäys
+
+INSERT INTO Kategoria (KategoriaID,KategoriaNimi) VALUES -- Lisää kategoria tauluun kyseiset arvot
+(1, "Action"),
+(2, "Crime"),
+(3, "Sci-Fi"),
+(4, "Space Opera");
+
+INSERT INTO Ohjaaja (OhjaajaID,OhjaajaNimi,Ika) VALUES
+(1, "Cristopher Nolan", 47),
+(2, "Quentin Tarantino", 58),
+(3, "The Wachowskis", 55),
+(4, "George Lucas", 76);
+
+INSERT INTO Nayttelija (NayttelijaID,NayttelijaNimi,Ika) VALUES
+(1, "Christian Bale", 47),
+(2, "John Travolta", 67),
+(3, "Leonardo DiCaprio", 46),
+(4, "Keanu Reeves", 56),
+(5, "Mark Hamill", 69);
+
+INSERT INTO Elokuva (ElokuvaID,OhjaajaID,KategoriaID,ElokuvaNimi,Vuosi,Kesto,Kuvaus) VALUES
+(1, 1, 1, "The Dark Knight", 2008, 152, "Christopher Nolanin ohjaama Batman trilogian toinen osa, jossa Batman kohtaa arkkivihollisensa Jokerin."),
+(2, 2, 2, "Pulp Fiction", 1994, 154, "Quentin Tarantinon klassikko-elokuva, joka on koostumus huumorista ja vakivallasta."),
+(3, 1, 1, "Inception", 2010, 148, "Christopher Nolandin ohjaama ja kasikirjoittama mielta mullistava seikkailu."),
+(4, 3, 3, "Matrix", 1999, 136, "Wachowskiesin ohjaama Sci-Fi elokuva kertoo sankari Neosta, joka huomaakin etta kaikki ei ole sita milta nayttaa."),
+(5, 4, 4, "Star Wars", 1977, 121, "Gerge Lucasin masteriteos aloittaa Luke Skywalkerin tarinan kaukana galaksissa.");
+
+INSERT INTO Nayttelijat (NayttelijaID,ElokuvaID) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5);
+
+INSERT INTO Arvostelija (ArvostelijaID,ArvostelijaNimi) VALUES
+(1, "Mikael"),
+(2, "Pekka"),
+(3, "Aleksi");
+
+INSERT INTO Arvostelu(ArvostelijaID,ElokuvaID,Arvosana) VALUES
+(1, 1, 10),
+(1, 2, 9),
+(1, 4, 10),
+(1, 5, 10),
+(2, 1, 7),
+(2, 3, 6),
+(3, 2, 10),
+(3, 4, 4),
+(3, 5, 8);
+
+CREATE VIEW nakymainfo /* Luotu yksi näkymä joka tuo nimiä monista tauluista ja laskee arvosteluiden keskiarvon elokuvittain. 
+Tiedot pinotaan yhteen ElokuvaID:llä ja järjestää Tähtien mukaan laskevassa järjestyksessä. */
+AS SELECT KategoriaNimi AS Kategoria, ElokuvaNimi AS Elokuva, OhjaajaNimi AS Ohjaaja, NayttelijaNimi AS Nayttelija, AVG(Arvosana) AS Tahdet FROM elokuva
+INNER JOIN nayttelijat
+ON elokuva.ElokuvaID = nayttelijat.ElokuvaID
+INNER JOIN nayttelija
+ON nayttelijat.NayttelijaID = nayttelija.NayttelijaID
+INNER JOIN ohjaaja
+ON elokuva.OhjaajaID = ohjaaja.OhjaajaID
+INNER JOIN kategoria
+ON elokuva.KategoriaID = kategoria.KategoriaID
+INNER JOIN arvostelu
+ON elokuva.ElokuvaID = arvostelu.ElokuvaID
+GROUP BY elokuva.ElokuvaID ORDER BY Tahdet DESC;
+```
+
 ### SQL-kyselyjä
 
+SQL-kysely, joka hakee kaikki tietyn arvostelijan tekemät arvostelut.
+
 ![](ht_arvostelu.png)
+
+Vapaavalintainen näkymä, johon tulee tärkeimmät tiedot tietokannasta.
 
 ![](ht_nakyma.png)
 
@@ -121,8 +328,28 @@ Nyt kun tietokanta on luotu onnistuneesti voin lisätä sinne dataa.
 
 ## Käyttöliittymä
 
-Kuvia, tekstiä ja linkki
+PHP on entuudestaan tuttu, vaikkenkaan ole siihen juuri koskenut 6-vuoteen, joten päätin tehdä jonkinlaisen käyttöliittymän. Päädyin tekemään "hakukoneen", joka hakee kaikista tauluista haettua merkkijonoa.
+
+Kuvia demo liittymästä:
+
+Haen hakusanalla "luke"
+
+![](ht_liittyma1.png)
+
+Koodi löytää Luke sanan Star Wars elokuvan kuvauksesta.
+
+![](ht_liittyma2.png)
+
+Valmista liittymää voi käyttää nettisivuillani, ja koodit ovat dokumentaation lopussa.
+
+Käyttöliittymä: http://migza.com/tietokannat/
+Käyttäjätunnus: migza
+Salasana: noetarvaa
+
+---
 
 ## Itsearviointi
+
+???
 
 ## Koodit
