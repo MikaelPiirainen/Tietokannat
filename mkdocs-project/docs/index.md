@@ -95,22 +95,6 @@ Tietokanta ja taulut onnistuivat.
 
 Nyt kun tietokanta on luotu onnistuneesti voin lisätä sinne dataa.
 
-
-
-### SQL-skripti
-
-### SQL-kyselyjä
-
----
-
-## Käyttöliittymä
-
-Kuvia, tekstiä ja linkki
-
-## Itsearviointi
-
-## Koodit
-
 ![](ht_data1.png)
 
 ![](ht_data2.png)
@@ -125,6 +109,20 @@ Kuvia, tekstiä ja linkki
 
 ![](ht_data7.png)
 
+### SQL-skripti
+
+### SQL-kyselyjä
+
 ![](ht_arvostelu.png)
 
 ![](ht_nakyma.png)
+
+---
+
+## Käyttöliittymä
+
+Kuvia, tekstiä ja linkki
+
+## Itsearviointi
+
+## Koodit
