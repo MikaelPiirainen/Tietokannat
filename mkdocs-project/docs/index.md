@@ -342,7 +342,7 @@ Koodi löytää Luke sanan Star Wars elokuvan kuvauksesta.
 
 Valmista liittymää voi käyttää nettisivuillani, ja koodit ovat dokumentaation lopussa.
 
-Käyttöliittymä: http://migza.com/tietokannat/
+Käyttöliittymä: [http://migza.com/tietokannat/](http://migza.com/tietokannat/)
 
 Käyttäjätunnus: migza
 Salasana: noetarvaa
@@ -359,7 +359,7 @@ Tässä käyttöliittymän koodit:
 
 **index.php**
 
-```PHP
+```HTML
 <html>
 <head>
 <title>Tietokannat</title>
