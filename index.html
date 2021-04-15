@@ -1,0 +1,1098 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="Mikael Piirainen">
+      
+      
+        <link rel="canonical" href="https://MikaelPiirainen.github.io/tietokannat/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.1">
+    
+    
+      
+        <title>Tietokannat</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.9299cb39.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"IBM Plex Sans";--md-code-font-family:"IBM Plex Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tietokannat-ttc2020-harjoitustyo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Tietokannat" class="md-header__button md-logo" aria-label="Tietokannat" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tietokannat
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Etusivu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/MikaelPiirainen/tietokannat/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tietokannat
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Tietokannat" class="md-nav__button md-logo" aria-label="Tietokannat" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Tietokannat
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/MikaelPiirainen/tietokannat/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tietokannat
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Etusivu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Etusivu
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#suunnitelma" class="md-nav__link">
+    Suunnitelma
+  </a>
+  
+    <nav class="md-nav" aria-label="Suunnitelma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vaatimusmaarittely" class="md-nav__link">
+    Vaatimusmäärittely
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kasiteanalyysi" class="md-nav__link">
+    Käsiteanalyysi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#er-kaavio" class="md-nav__link">
+    ER-kaavio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tietokannan-toteutus" class="md-nav__link">
+    Tietokannan toteutus
+  </a>
+  
+    <nav class="md-nav" aria-label="Tietokannan toteutus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tietokannan-luonti" class="md-nav__link">
+    Tietokannan luonti
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tietojen-lisays-tauluihin" class="md-nav__link">
+    Tietojen lisäys tauluihin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-skripti" class="md-nav__link">
+    SQL-skripti
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-kyselyja" class="md-nav__link">
+    SQL-kyselyjä
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kayttoliittyma" class="md-nav__link">
+    Käyttöliittymä
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#itsearviointi" class="md-nav__link">
+    Itsearviointi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#koodit" class="md-nav__link">
+    Koodit
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#suunnitelma" class="md-nav__link">
+    Suunnitelma
+  </a>
+  
+    <nav class="md-nav" aria-label="Suunnitelma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vaatimusmaarittely" class="md-nav__link">
+    Vaatimusmäärittely
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kasiteanalyysi" class="md-nav__link">
+    Käsiteanalyysi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#er-kaavio" class="md-nav__link">
+    ER-kaavio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tietokannan-toteutus" class="md-nav__link">
+    Tietokannan toteutus
+  </a>
+  
+    <nav class="md-nav" aria-label="Tietokannan toteutus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tietokannan-luonti" class="md-nav__link">
+    Tietokannan luonti
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tietojen-lisays-tauluihin" class="md-nav__link">
+    Tietojen lisäys tauluihin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-skripti" class="md-nav__link">
+    SQL-skripti
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-kyselyja" class="md-nav__link">
+    SQL-kyselyjä
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kayttoliittyma" class="md-nav__link">
+    Käyttöliittymä
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#itsearviointi" class="md-nav__link">
+    Itsearviointi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#koodit" class="md-nav__link">
+    Koodit
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/MikaelPiirainen/tietokannat/edit/master/mkdocs-project/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="tietokannat-ttc2020-harjoitustyo">Tietokannat TTC2020 - Harjoitustyö<a class="headerlink" href="#tietokannat-ttc2020-harjoitustyo" title="Permanent link">&para;</a></h1>
+<p><strong>Esittely video:</strong></p>
+<p><a href="https://youtu.be/uH-K4Kg0GGw" target="_blank">Videon linkki</a></p>
+<h2 id="suunnitelma">Suunnitelma<a class="headerlink" href="#suunnitelma" title="Permanent link">&para;</a></h2>
+<h3 id="vaatimusmaarittely">Vaatimusmäärittely<a class="headerlink" href="#vaatimusmaarittely" title="Permanent link">&para;</a></h3>
+<p><strong>Elokuvatietokanta</strong></p>
+<ul>
+<li>"elokuva_db" -tietokanta</li>
+<li>Työryhmä: Mikael Piirainen AA2799</li>
+<li>Versio 1.0</li>
+</ul>
+<p><strong>1. Johdanto</strong></p>
+<p>Tarkoituksena suunnitella ja luoda tietokanta, joka sisältää tietoa elokuvista, niiden arvosteluista ja näyttelijöistä ja muusta. Tietokanta luodaan harjoitustyönä TTC2020 kurssilla, jota opettaa Ari Rantala.</p>
+<p><strong>2. Yleiskuvaus</strong></p>
+<p>Tietokanta työstetään lokaalisti ja siirretään omalle palvelimelle, kun se on valmis. Tietokantaa varten luodaan  käyttöliittymä, jolla voidaan hakea tietoja verkkosivulle. Toteutus tehdään MySQL Workbench:illä sekä käyttöliittymä tehdään PHP-ohjelmointi kielellä. Dokumentaatio kirjoitetaan GitHubiin ja julkaistaan sivustona hyödyntäen MkDocs:ia.</p>
+<p><strong>3. Toiminnot</strong></p>
+<p>Pakolliset toiminnot:</p>
+<ul>
+<li>Elokuvien tietojen tallennus</li>
+<li>Arvostelujen teko</li>
+<li>Elokuvien haku tietokannasta</li>
+</ul>
+<hr />
+<h3 id="kasiteanalyysi">Käsiteanalyysi<a class="headerlink" href="#kasiteanalyysi" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Käsite-ehdokkaat:</strong></th>
+<th><strong>Taulu</strong></th>
+<th><strong>Taulu</strong></th>
+<th><strong>Taulu</strong></th>
+<th><strong>Taulu</strong></th>
+<th><strong>Taulu</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ElokuvaID</td>
+<td>ElokuvaID</td>
+<td>Ohjaaja</td>
+<td>Näyttelijät</td>
+<td>Arvostelu</td>
+<td>KategoriaID</td>
+</tr>
+<tr>
+<td>ElokuvaNimi</td>
+<td>ElokuvaNimi</td>
+<td></td>
+<td>Näyttelijä</td>
+<td>Arvostelija</td>
+<td>KategoriaNimi</td>
+</tr>
+<tr>
+<td>Kuvaus</td>
+<td>Kuvaus</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vuosi</td>
+<td>Vuosi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ohjaaja</td>
+<td>Kesto</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Näyttelijä</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Arvostelija</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Arvostelu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KategoriaID</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KategoriaNimi</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Kesto</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Näyttelijät</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Visuaalinen hahmotus ja lisää käsitteitä:</strong></p>
+<p>Hahmotus tehty draw.io sovelluksella.</p>
+<p><img alt="" src="ht_draw.png" /></p>
+<p><strong>Perustelut ratkaisuille:</strong></p>
+<ul>
+<li>
+<p>Elokuva ja Näyttelijä tauluilla on moni-moneen yhteys ja siihen syntyy liitostaulu Näyttelijät. Isäntätaulujen pääavaimet toimivat liitostaulun viiteavaimina. <em>Elokuvalla voi olla useita näyttelijöitä ja näyttelijät voivat olla useissa elokuvissa.</em></p>
+</li>
+<li>
+<p>Elokuva ja Arvostelija tauluilla samat perustelut kuin Elokuva - Näyttelijätauluilla, lisäksi liitostauluun lisätään arvosana.</p>
+</li>
+<li>
+<p>Elokuva ja Kategoria tauluilla on yksi-moneen yhteys. <em>Elokuva kuuluu kategoriaa ja kategoriaan voi kuulua useita elokuvia.</em> (Tiedostan, että useilla elokuvilla saatta olla monia kategorioita, mutta haluan tähän tietokantaan vain "pää kategorian").</p>
+</li>
+<li>
+<p>Elokuva ja Ohjaaja tauluilla on yksi-moneen yhteys. <em>Elokuvalla on yksi ohjaaja ja ohjaaja on voinut tehdä monta elokuvaa.</em> (Tämä on yleisin elokuvascenessä, vaikkakin poikkeuksiakin löytyy: "Russo Brothers: Avengers: Infinity War &amp; Endgame, The Wachowskis: Matrix 1-3)</p>
+</li>
+</ul>
+<hr />
+<h3 id="er-kaavio">ER-kaavio<a class="headerlink" href="#er-kaavio" title="Permanent link">&para;</a></h3>
+<p>ER-kaavio tehty MySQL Workbenchi:llä. Luovuin "kansalaisuudesta", koska sille pitäisi olla oma taulunsa, mutta se ei ole niin välttämätön elokuvatietokannassa.</p>
+<p><img alt="" src="ht_er.png" /></p>
+<hr />
+<h2 id="tietokannan-toteutus">Tietokannan toteutus<a class="headerlink" href="#tietokannan-toteutus" title="Permanent link">&para;</a></h2>
+<h3 id="tietokannan-luonti">Tietokannan luonti<a class="headerlink" href="#tietokannan-luonti" title="Permanent link">&para;</a></h3>
+<p>Tietokanta luodaan Workbenchin FORWARD ENGINEERING optiolla.</p>
+<p>Tietokanta ja taulut onnistuivat.</p>
+<p><img alt="" src="ht_db1.png" /></p>
+<h3 id="tietojen-lisays-tauluihin">Tietojen lisäys tauluihin<a class="headerlink" href="#tietojen-lisays-tauluihin" title="Permanent link">&para;</a></h3>
+<p>Nyt kun tietokanta on luotu onnistuneesti, niin sinne voidaan lisätä dataa.</p>
+<p>Tietojen lisäys <em>Kategoria</em> tauluun:</p>
+<p><img alt="" src="ht_data1.png" /></p>
+<p>Tietojen lisäys <em>Ohjaaja</em> tauluun.</p>
+<p><img alt="" src="ht_data2.png" /></p>
+<p>Tietojen lisäys <em>Nayttelija</em> tauluun.</p>
+<p><img alt="" src="ht_data3.png" /></p>
+<p>Tietojen lisäys <em>Elokuva</em> tauluun.</p>
+<p><img alt="" src="ht_data4.png" /></p>
+<p>Tietojen lisäys <em>Nayttelijat</em> tauluun.</p>
+<p><img alt="" src="ht_data5.png" /></p>
+<p>Tietojen lisäys <em>Arvostelija</em> tauluun.</p>
+<p><img alt="" src="ht_data6.png" /></p>
+<p>Tietojen lisäys <em>Arvostelu</em> tauluun.</p>
+<p><img alt="" src="ht_data7.png" /></p>
+<h3 id="sql-skripti">SQL-skripti<a class="headerlink" href="#sql-skripti" title="Permanent link">&para;</a></h3>
+<p>Tietokannan luonti skripti.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">-- -----------------------------------------------------</span>
+<span class="c1">-- Schema elokuva_db</span>
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="k">CREATE</span> <span class="k">SCHEMA</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">elokuva_db</span><span class="o">`</span> <span class="p">;</span> <span class="c1">-- Luo kyseisen tietokannan, jos sitä ei ole</span>
+<span class="n">USE</span> <span class="o">`</span><span class="n">elokuva_db</span><span class="o">`</span> <span class="p">;</span> <span class="c1">-- Ottaa luodun tietokannan käyttöön tulevia komentoja varten</span>
+
+
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="c1">-- Table `Kategoria`</span>
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">Kategoria</span><span class="o">`</span> <span class="p">(</span> <span class="c1">-- Luo taulun Kategoria, jos sitä ei ole</span>
+  <span class="o">`</span><span class="n">KategoriaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="c1">-- INT (numero) tyyppinen sarake</span>
+  <span class="o">`</span><span class="n">KategoriaNimi</span><span class="o">`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="c1">-- Vaihtelevamerkki maksimissaan 64 merkkiä sarake</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">KategoriaID</span><span class="o">`</span><span class="p">))</span> <span class="c1">-- Taulun pääavaimeksi valitaan KategoriaID</span>
+<span class="n">ENGINE</span> <span class="o">=</span> <span class="n">InnoDB</span><span class="p">;</span>
+
+
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="c1">-- Table `Ohjaaja`</span>
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">Ohjaaja</span><span class="o">`</span> <span class="p">(</span> 
+  <span class="o">`</span><span class="n">OhjaajaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">OhjaajaNimi</span><span class="o">`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">Ika</span><span class="o">`</span> <span class="nb">INT</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="c1">-- INT on rajattu vain kolmilukuiseksi</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">OhjaajaID</span><span class="o">`</span><span class="p">))</span>
+<span class="n">ENGINE</span> <span class="o">=</span> <span class="n">InnoDB</span><span class="p">;</span>
+
+
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="c1">-- Table `Elokuva`</span>
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">Elokuva</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">OhjaajaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">KategoriaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">ElokuvaNimi</span><span class="o">`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> 
+  <span class="o">`</span><span class="n">Vuosi</span><span class="o">`</span> <span class="k">YEAR</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="c1">-- sarake johon voi laittaa vain vuosiluvun</span>
+  <span class="o">`</span><span class="n">Kesto</span><span class="o">`</span> <span class="nb">INT</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">Kuvaus</span><span class="o">`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">512</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">INDEX</span> <span class="o">`</span><span class="n">fk_Elokuva_Kategoria1_idx</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">KategoriaID</span><span class="o">`</span> <span class="k">ASC</span><span class="p">),</span> <span class="c1">-- viitetaulujen määritys</span>
+  <span class="k">INDEX</span> <span class="o">`</span><span class="n">fk_Elokuva_Ohjaaja1_idx</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">OhjaajaID</span><span class="o">`</span> <span class="k">ASC</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">fk_Elokuva_Kategoria1</span><span class="o">`</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">KategoriaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">Kategoria</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">KategoriaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">NO</span> <span class="n">ACTION</span>
+    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">NO</span> <span class="n">ACTION</span><span class="p">,</span>
+  <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">fk_Elokuva_Ohjaaja1</span><span class="o">`</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">OhjaajaID</span><span class="o">`</span><span class="p">)</span> <span class="c1">-- Ohjaajan id:tä ei toimintaa poiston tai päivityksen yhteydessä</span>
+    <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">Ohjaaja</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">OhjaajaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">NO</span> <span class="n">ACTION</span>
+    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">NO</span> <span class="n">ACTION</span><span class="p">)</span>
+<span class="n">ENGINE</span> <span class="o">=</span> <span class="n">InnoDB</span><span class="p">;</span>
+
+
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="c1">-- Table Nayttelija`</span>
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">Nayttelija</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">NayttelijaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">NayttelijaNimi</span><span class="o">`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">Ika</span><span class="o">`</span> <span class="nb">INT</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">NayttelijaID</span><span class="o">`</span><span class="p">))</span>
+<span class="n">ENGINE</span> <span class="o">=</span> <span class="n">InnoDB</span><span class="p">;</span>
+
+
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="c1">-- Table `Nayttelijat`</span>
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">Nayttelijat</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">NayttelijaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">NayttelijaID</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">INDEX</span> <span class="o">`</span><span class="n">fk_Nayttelija_has_Elokuva_Elokuva1_idx</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span> <span class="k">ASC</span><span class="p">),</span>
+  <span class="k">INDEX</span> <span class="o">`</span><span class="n">fk_Nayttelija_has_Elokuva_Nayttelija_idx</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">NayttelijaID</span><span class="o">`</span> <span class="k">ASC</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">fk_Nayttelija_has_Elokuva_Nayttelija</span><span class="o">`</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">NayttelijaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">Nayttelija</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">NayttelijaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">NO</span> <span class="n">ACTION</span>
+    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">NO</span> <span class="n">ACTION</span><span class="p">,</span>
+  <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">fk_Nayttelija_has_Elokuva_Elokuva1</span><span class="o">`</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">Elokuva</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">NO</span> <span class="n">ACTION</span>
+    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">NO</span> <span class="n">ACTION</span><span class="p">)</span>
+<span class="n">ENGINE</span> <span class="o">=</span> <span class="n">InnoDB</span><span class="p">;</span>
+
+
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="c1">-- Table `Arvostelija`</span>
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">Arvostelija</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">ArvostelijaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">ArvostelijaNimi</span><span class="o">`</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">ArvostelijaID</span><span class="o">`</span><span class="p">))</span>
+<span class="n">ENGINE</span> <span class="o">=</span> <span class="n">InnoDB</span><span class="p">;</span>
+
+
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="c1">-- Table `Arvostelu`</span>
+<span class="c1">-- -----------------------------------------------------</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">Arvostelu</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">ArvostelijaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span> <span class="nb">INT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">Arvosana</span><span class="o">`</span> <span class="nb">INT</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">ArvostelijaID</span><span class="o">`</span><span class="p">,</span> <span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">INDEX</span> <span class="o">`</span><span class="n">fk_Arvostelija_has_Elokuva_Elokuva1_idx</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span> <span class="k">ASC</span><span class="p">),</span>
+  <span class="k">INDEX</span> <span class="o">`</span><span class="n">fk_Arvostelija_has_Elokuva_Arvostelija1_idx</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">ArvostelijaID</span><span class="o">`</span> <span class="k">ASC</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">fk_Arvostelija_has_Elokuva_Arvostelija1</span><span class="o">`</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">ArvostelijaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">Arvostelija</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">ArvostelijaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">NO</span> <span class="n">ACTION</span>
+    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">NO</span> <span class="n">ACTION</span><span class="p">,</span>
+  <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">fk_Arvostelija_has_Elokuva_Elokuva1</span><span class="o">`</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">Elokuva</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">ElokuvaID</span><span class="o">`</span><span class="p">)</span>
+    <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">NO</span> <span class="n">ACTION</span>
+    <span class="k">ON</span> <span class="k">UPDATE</span> <span class="k">NO</span> <span class="n">ACTION</span><span class="p">)</span>
+<span class="n">ENGINE</span> <span class="o">=</span> <span class="n">InnoDB</span><span class="p">;</span>
+
+<span class="c1">-- Taulut tehty, tästä alkaa tietojen lisäys</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Kategoria</span> <span class="p">(</span><span class="n">KategoriaID</span><span class="p">,</span><span class="n">KategoriaNimi</span><span class="p">)</span> <span class="k">VALUES</span> <span class="c1">-- Lisää kategoria tauluun kyseiset arvot</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;Action&quot;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="ss">&quot;Crime&quot;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="ss">&quot;Sci-Fi&quot;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="ss">&quot;Space Opera&quot;</span><span class="p">);</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Ohjaaja</span> <span class="p">(</span><span class="n">OhjaajaID</span><span class="p">,</span><span class="n">OhjaajaNimi</span><span class="p">,</span><span class="n">Ika</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;Cristopher Nolan&quot;</span><span class="p">,</span> <span class="mi">47</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="ss">&quot;Quentin Tarantino&quot;</span><span class="p">,</span> <span class="mi">58</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="ss">&quot;The Wachowskis&quot;</span><span class="p">,</span> <span class="mi">55</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="ss">&quot;George Lucas&quot;</span><span class="p">,</span> <span class="mi">76</span><span class="p">);</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Nayttelija</span> <span class="p">(</span><span class="n">NayttelijaID</span><span class="p">,</span><span class="n">NayttelijaNimi</span><span class="p">,</span><span class="n">Ika</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;Christian Bale&quot;</span><span class="p">,</span> <span class="mi">47</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="ss">&quot;John Travolta&quot;</span><span class="p">,</span> <span class="mi">67</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="ss">&quot;Leonardo DiCaprio&quot;</span><span class="p">,</span> <span class="mi">46</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="ss">&quot;Keanu Reeves&quot;</span><span class="p">,</span> <span class="mi">56</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="ss">&quot;Mark Hamill&quot;</span><span class="p">,</span> <span class="mi">69</span><span class="p">);</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Elokuva</span> <span class="p">(</span><span class="n">ElokuvaID</span><span class="p">,</span><span class="n">OhjaajaID</span><span class="p">,</span><span class="n">KategoriaID</span><span class="p">,</span><span class="n">ElokuvaNimi</span><span class="p">,</span><span class="n">Vuosi</span><span class="p">,</span><span class="n">Kesto</span><span class="p">,</span><span class="n">Kuvaus</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;The Dark Knight&quot;</span><span class="p">,</span> <span class="mi">2008</span><span class="p">,</span> <span class="mi">152</span><span class="p">,</span> <span class="ss">&quot;Christopher Nolanin ohjaama Batman trilogian toinen osa, jossa Batman kohtaa arkkivihollisensa Jokerin.&quot;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="ss">&quot;Pulp Fiction&quot;</span><span class="p">,</span> <span class="mi">1994</span><span class="p">,</span> <span class="mi">154</span><span class="p">,</span> <span class="ss">&quot;Quentin Tarantinon klassikko-elokuva, joka on koostumus huumorista ja vakivallasta.&quot;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;Inception&quot;</span><span class="p">,</span> <span class="mi">2010</span><span class="p">,</span> <span class="mi">148</span><span class="p">,</span> <span class="ss">&quot;Christopher Nolandin ohjaama ja kasikirjoittama mielta mullistava seikkailu.&quot;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="ss">&quot;Matrix&quot;</span><span class="p">,</span> <span class="mi">1999</span><span class="p">,</span> <span class="mi">136</span><span class="p">,</span> <span class="ss">&quot;Wachowskiesin ohjaama Sci-Fi elokuva kertoo sankari Neosta, joka huomaakin etta kaikki ei ole sita milta nayttaa.&quot;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="ss">&quot;Star Wars&quot;</span><span class="p">,</span> <span class="mi">1977</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="ss">&quot;Gerge Lucasin masteriteos aloittaa Luke Skywalkerin tarinan kaukana galaksissa.&quot;</span><span class="p">);</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Nayttelijat</span> <span class="p">(</span><span class="n">NayttelijaID</span><span class="p">,</span><span class="n">ElokuvaID</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Arvostelija</span> <span class="p">(</span><span class="n">ArvostelijaID</span><span class="p">,</span><span class="n">ArvostelijaNimi</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="ss">&quot;Mikael&quot;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="ss">&quot;Pekka&quot;</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="ss">&quot;Aleksi&quot;</span><span class="p">);</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Arvostelu</span><span class="p">(</span><span class="n">ArvostelijaID</span><span class="p">,</span><span class="n">ElokuvaID</span><span class="p">,</span><span class="n">Arvosana</span><span class="p">)</span> <span class="k">VALUES</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+
+<span class="k">CREATE</span> <span class="k">VIEW</span> <span class="n">nakymainfo</span> <span class="cm">/* Luotu yksi näkymä joka tuo nimiä monista tauluista ja laskee arvosteluiden keskiarvon elokuvittain. </span>
+<span class="cm">Tiedot pinotaan yhteen ElokuvaID:llä ja järjestää Tähtien mukaan laskevassa järjestyksessä. */</span>
+<span class="k">AS</span> <span class="k">SELECT</span> <span class="n">KategoriaNimi</span> <span class="k">AS</span> <span class="n">Kategoria</span><span class="p">,</span> <span class="n">ElokuvaNimi</span> <span class="k">AS</span> <span class="n">Elokuva</span><span class="p">,</span> <span class="n">OhjaajaNimi</span> <span class="k">AS</span> <span class="n">Ohjaaja</span><span class="p">,</span> <span class="n">NayttelijaNimi</span> <span class="k">AS</span> <span class="n">Nayttelija</span><span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">Arvosana</span><span class="p">)</span> <span class="k">AS</span> <span class="n">Tahdet</span> <span class="k">FROM</span> <span class="n">Elokuva</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Nayttelijat</span>
+<span class="k">ON</span> <span class="n">Elokuva</span><span class="p">.</span><span class="n">ElokuvaID</span> <span class="o">=</span> <span class="n">Nayttelijat</span><span class="p">.</span><span class="n">ElokuvaID</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Nayttelija</span>
+<span class="k">ON</span> <span class="n">Nayttelijat</span><span class="p">.</span><span class="n">NayttelijaID</span> <span class="o">=</span> <span class="n">Nayttelija</span><span class="p">.</span><span class="n">NayttelijaID</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Ohjaaja</span>
+<span class="k">ON</span> <span class="n">Elokuva</span><span class="p">.</span><span class="n">OhjaajaID</span> <span class="o">=</span> <span class="n">Ehjaaja</span><span class="p">.</span><span class="n">OhjaajaID</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Kategoria</span>
+<span class="k">ON</span> <span class="n">Elokuva</span><span class="p">.</span><span class="n">KategoriaID</span> <span class="o">=</span> <span class="n">Kategoria</span><span class="p">.</span><span class="n">KategoriaID</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">Arvostelu</span>
+<span class="k">ON</span> <span class="n">Elokuva</span><span class="p">.</span><span class="n">ElokuvaID</span> <span class="o">=</span> <span class="n">Arvostelu</span><span class="p">.</span><span class="n">ElokuvaID</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">Elokuva</span><span class="p">.</span><span class="n">ElokuvaID</span> <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">Tahdet</span> <span class="k">DESC</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="sql-kyselyja">SQL-kyselyjä<a class="headerlink" href="#sql-kyselyja" title="Permanent link">&para;</a></h3>
+<p>SQL-kysely, joka hakee kaikki tietyn arvostelijan tekemät arvostelut.</p>
+<p><img alt="" src="ht_arvostelu.png" /></p>
+<p>Vapaavalintainen näkymä, johon tulee tärkeimmät tiedot tietokannasta.</p>
+<p><img alt="" src="ht_nakyma.png" /></p>
+<hr />
+<h2 id="kayttoliittyma">Käyttöliittymä<a class="headerlink" href="#kayttoliittyma" title="Permanent link">&para;</a></h2>
+<p>PHP on entuudestaan tuttu, vaikkenkaan ole siihen juuri koskenut 6-vuoteen, joten päätin tehdä jonkinlaisen käyttöliittymän. Päädyin tekemään "hakukoneen", joka hakee kaikista tauluista haettua merkkijonoa.</p>
+<p>Kuvia demo liittymästä:</p>
+<p>Haen hakusanalla "luke"</p>
+<p><img alt="" src="ht_liittyma1.png" /></p>
+<p>Koodi löytää Luke sanan Star Wars elokuvan kuvauksesta.</p>
+<p><img alt="" src="ht_liittyma2.png" /></p>
+<p>Valmista liittymää voi käyttää nettisivuillani, ja koodit ovat dokumentaation lopussa.</p>
+<p>Käyttöliittymä: <a href="http://migza.com/tietokannat/" target="_blank">http://migza.com/tietokannat/</a></p>
+<p>Käyttäjätunnus: migza</p>
+<p>Salasana: noetarvaa</p>
+<hr />
+<h2 id="itsearviointi">Itsearviointi<a class="headerlink" href="#itsearviointi" title="Permanent link">&para;</a></h2>
+<p>Harjoitustyön tekeminen oli mielekästä puuhaa ja sain siinä lisäoppia entuudestaan tutusta SQL:stä ja sain palautettua myös PHP:n perustoimintoja. MkDocs:in asentaminen ja oppiminen oli aivan uusiasia ja markdownilla dokumentointia olen pitkin vuotta tehnytkin. Harmi vain etten saanut sitä studentin labranettiin toimimaan.</p>
+<p>Aikaa kului noin. <strong>40 tuntia.</strong></p>
+<p>Olen tyytyväinen dokumentaatioon ja iloinen, että sain käyttöliittymän toimimaan, ja sitä aionkin jatkossa päivittää paremmaksi, jotta sinne voi laittaa tietoa myös, eikä pelkästään hakea niitä.</p>
+<p>Jonkinverran virheitä tuli työtä tietokantaa suunnittelussa ja tietokanta olisi voinut olla laajempikin.</p>
+<p>Arvosanaehdotus: <strong>4.</strong></p>
+<h2 id="koodit">Koodit<a class="headerlink" href="#koodit" title="Permanent link">&para;</a></h2>
+<p>Tässä käyttöliittymän koodit:</p>
+<p><strong>index.php</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Tietokannat<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;tyylit.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="kd">function</span> <span class="nx">validateForm</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="s2">&quot;myForm&quot;</span><span class="p">][</span><span class="s2">&quot;form-name&quot;</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Syötä kenttään tekstiä&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>Elokuvatietokanta<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;haku&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">form</span>  <span class="na">name</span><span class="o">=</span><span class="s">&quot;myForm&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">onsubmit</span><span class="o">=</span><span class="s">&quot;return validateForm()&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Hae tietokannasta&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;form-name&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Hae&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+        <span class="cp">&lt;?php</span>
+<span class="cp">        include &#39;form.php&#39;;</span>
+<span class="cp">        ?&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+        Mikael Piirainen - AA2799@student.jamk.fi
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>form.php</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?php</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;form-name&#39;</span><span class="p">]))</span>
+   <span class="p">{</span>
+    <span class="nv">$servername</span> <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span><span class="p">;</span>
+    <span class="nv">$username</span> <span class="o">=</span> <span class="s2">&quot;root&quot;</span><span class="p">;</span>
+    <span class="nv">$password</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="nv">$dbname</span> <span class="o">=</span> <span class="s2">&quot;elokuva_db&quot;</span><span class="p">;</span>
+    <span class="nv">$search</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s2">&quot;form-name&quot;</span><span class="p">];</span>
+
+    <span class="c1">// Create connection</span>
+    <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="nv">$servername</span><span class="p">,</span> <span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$dbname</span><span class="p">);</span>
+    <span class="c1">// Check connection</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">connect_error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">die</span><span class="p">(</span><span class="s2">&quot;Connection failed: &quot;</span> <span class="o">.</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">connect_error</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">echo</span> <span class="s2">&quot;&lt;div class=&#39;tulos&#39;&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;&lt;div class=&#39;tulos-sisä&#39;&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;&lt;h2&gt;Elokuvat&lt;/h2&gt;&quot;</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">&quot;&lt;hr&gt;&quot;</span><span class="p">;</span>
+
+    <span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;SELECT ElokuvaNimi, Vuosi, Kuvaus, Kesto, OhjaajaNimi, AVG(Arvosana) AS Tahdet, NayttelijaNimi, KategoriaNimi FROM Elokuva</span>
+<span class="s2">    INNER JOIN Ohjaaja</span>
+<span class="s2">    ON Elokuva.OhjaajaID = Ohjaaja.OhjaajaID</span>
+<span class="s2">    INNER JOIN Arvostelu</span>
+<span class="s2">    ON Elokuva.ElokuvaID = Arvostelu.ElokuvaID</span>
+<span class="s2">    INNER JOIN Nayttelijat</span>
+<span class="s2">    ON Elokuva.ElokuvaID = Nayttelijat.ElokuvaID</span>
+<span class="s2">    INNER JOIN Nayttelija</span>
+<span class="s2">    ON Nayttelijat.NayttelijaID = Nayttelija.NayttelijaID</span>
+<span class="s2">    INNER JOIN Kategoria</span>
+<span class="s2">    ON Elokuva.KategoriaID = Kategoria.KategoriaID</span>
+<span class="s2">    WHERE </span>
+<span class="s2">    ElokuvaNimi LIKE &#39;%&quot;</span> <span class="o">.</span> <span class="nv">$search</span> <span class="o">.</span>  <span class="s2">&quot;%&#39; </span>
+<span class="s2">    OR Vuosi LIKE &#39;%&quot;</span> <span class="o">.</span> <span class="nv">$search</span> <span class="o">.</span>  <span class="s2">&quot;%&#39;</span>
+<span class="s2">    OR Kuvaus LIKE &#39;%&quot;</span> <span class="o">.</span> <span class="nv">$search</span> <span class="o">.</span>  <span class="s2">&quot;%&#39;</span>
+<span class="s2">    OR NayttelijaNimi LIKE &#39;%&quot;</span> <span class="o">.</span> <span class="nv">$search</span> <span class="o">.</span>  <span class="s2">&quot;%&#39;</span>
+<span class="s2">    OR KategoriaNimi LIKE &#39;%&quot;</span> <span class="o">.</span> <span class="nv">$search</span> <span class="o">.</span>  <span class="s2">&quot;%&#39;</span>
+<span class="s2">    OR OhjaajaNimi LIKE &#39;%&quot;</span> <span class="o">.</span> <span class="nv">$search</span> <span class="o">.</span>  <span class="s2">&quot;%&#39; GROUP BY Elokuva.ElokuvaID&quot;</span><span class="p">;</span>
+    <span class="nv">$result</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$result</span><span class="o">-&gt;</span><span class="na">num_rows</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// output data of each row</span>
+      <span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">fetch_assoc</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">&quot;&lt;h3&gt;&quot;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s2">&quot;ElokuvaNimi&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;/h3&gt;&quot;</span> <span class="o">.</span>
+            <span class="s2">&quot;Ohjaaja: &quot;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s2">&quot;OhjaajaNimi&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span> <span class="o">.</span>
+            <span class="s2">&quot;Näyttelijä: &quot;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s2">&quot;NayttelijaNimi&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;&quot;</span> <span class="o">.</span>
+            <span class="s2">&quot;Kategoria: &quot;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s2">&quot;KategoriaNimi&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span> <span class="o">.</span>
+            <span class="s2">&quot;Vuosi: &quot;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&quot;</span> <span class="o">.</span>            
+            <span class="s2">&quot;Kesto: &quot;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s2">&quot;Kesto&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot; min&lt;br&gt;&quot;</span> <span class="o">.</span>
+            <span class="s2">&quot;Tähdet: &quot;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s2">&quot;Tahdet&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;&quot;</span> <span class="o">.</span>
+            <span class="s2">&quot;Kuvaus: &quot;</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s2">&quot;Kuvaus&quot;</span><span class="p">]</span> <span class="o">.</span> <span class="s2">&quot;&lt;br&gt;&lt;hr&gt;&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">echo</span> <span class="s2">&quot;Ei tuloksia.&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">echo</span> <span class="s2">&quot;&lt;/div&gt;&lt;/div&gt;&quot;</span><span class="p">;</span>
+
+    <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">close</span><span class="p">();</span>
+   <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</code></pre></div>
+<p><strong>tyylit.css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://fonts.googleapis.com/css2?family=Abel&amp;display=swap&#39;</span><span class="o">)</span><span class="p">;</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">haku</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="o">:</span> <span class="kc">block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">tulos</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span> <span class="mi">30</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mf">0.25</span><span class="kt">em</span> <span class="mf">0.5</span><span class="kt">em</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">tulos-sisä</span> <span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">arial</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">form</span> <span class="p">{</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#575757</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Abel&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#f5f0f0</span><span class="p">;</span>
+    <span class="k">letter-spacing</span><span class="p">:</span> <span class="mf">0.1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">a</span><span class="p">:</span><span class="nd">link</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">visited</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#f5f0f0</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">grey</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#575757</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">arial</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#f5f0f0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">text</span><span class="o">]</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">30</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="nt">submit</span><span class="o">]</span> <span class="p">{</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
+  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.7353b375.min.js"></script>
+      
+    
+  </body>
+</html>
