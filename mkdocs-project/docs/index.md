@@ -1,6 +1,8 @@
 # Tietokannat TTC2020 - Harjoitustyö
 
-VIDEON LINKKI
+**Esittely video:**
+
+![Video](esittely.mp4)
 
 ## Suunnitelma
 
@@ -342,9 +344,10 @@ Koodi löytää Luke sanan Star Wars elokuvan kuvauksesta.
 
 Valmista liittymää voi käyttää nettisivuillani, ja koodit ovat dokumentaation lopussa.
 
-Käyttöliittymä: [http://migza.com/tietokannat/](http://migza.com/tietokannat/)
+Käyttöliittymä: [http://migza.com/tietokannat/](http://migza.com/tietokannat/){:target="_blank"}
 
 Käyttäjätunnus: migza
+
 Salasana: noetarvaa
 
 ---
