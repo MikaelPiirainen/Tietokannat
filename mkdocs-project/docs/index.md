@@ -2,7 +2,7 @@
 
 **Esittely video:**
 
-![VIDEON LINKKI](https://youtu.be/uH-K4Kg0GGw){:target="_blank"}
+[Videon linkki](https://youtu.be/uH-K4Kg0GGw){:target="_blank"}
 
 ## Suunnitelma
 
